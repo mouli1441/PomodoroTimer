@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="font-size:40px;">⏳POMODORO TIMER WEBSITE⌛</h1>
+
+    <figure class="clock">
+      <div class="mins"><b>0</b></div>
+      <div>:</div>
+      <div class="secs">00</div>
+      <audio
+        src="http://soundbible.com/mp3/service-bell_daniel_simion.mp3"
+      ></audio>
+      <svg class="progress-ring" height="120" width="120">
+        <circle
+          class="progress-ring__circle"
+          stroke-width="8"
+          fill="transparent"
+          r="50"
+          cx="60"
+          cy="60"
+        />
+      </svg>
+    </figure>
+
+    <div class="btn-group">
+      <button class="start">START</button>
+      <button class="reset">RESET</button>
+      <button class="pause">PAUSE</button>
+
+    </div>
+
+    <form action=".">
+      <label for="focusTime"><b>TARGET 🎯</b></label>
+      <input type="number" value="1" id="focusTime" />
+      <label for="breakTime"><b>TIME FOR BREAK !! </b></label>
+      <input type="number" value="1" id="breakTime" />
+      <button class="submit">ADJUST AND SET TIMER ⏲</button>
+
+    </form>
+
+
+    <script src="settings.js"></script>
+    <script src="timer.js"></script>
+    <script src="progress.js"></script>
+  </body>
+</html>

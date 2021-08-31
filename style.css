@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 35px;
+
+  background: linear-gradient(to right,#52006A ,#CD113B, #FF7600, #FFA900);
+  color: #131313;
+  font-family: "Rampart One", cursive;
+}
+
+body.insert {border-style: insert;}
+
+h1 {
+  margin: 15px 0;
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
+}
+input {
+  transition: 0.5s ease-in-out;
+  margin: 20px 0;
+  font-size: 18px;
+  padding: 15px;
+  background: rgba(423, 346, 9, 0.11);
+  border-style: outset;
+}
+
+input {
+  background-color: #C9CCD5;
+
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  margin: 35px 0;
+}
+.start {
+  transition-duration: 0.4s;
+  font-family: "Rampart One", cursive;
+}
+
+.start:hover {
+  background-color: #86340A;
+  font-family: "Rampart One", cursive;
+  color: white;
+}
+.start:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.reset{
+  transition-duration: 0.4s;
+font-family: "Rampart One", cursive;
+}
+
+.reset:hover {
+  background-color: #11052C;
+  font-family: "Rampart One", cursive;
+  color: white;
+}
+.reset:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  font-family: "Rampart One", cursive;
+}
+.pause{
+  transition-duration: 0.4s;
+  font-family: "Rampart One", cursive;
+}
+
+.pause:hover {
+  background-color: #F98404;
+  font-family: "Rampart One", cursive;
+  color: white;
+}
+.pause:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  font-family: "Rampart One", cursive;
+}
+.submit{
+  transition-duration: 0.4s;
+  font-family: "Rampart One", cursive;
+}
+
+.submit:hover {
+  background-color: #FF94CC;
+  font-family: "Rampart One", cursive;
+  color: white;
+}
+.submit:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+  transition: 0.4s ease-in-out;
+}
+
+.submit{
+  background-color: darkpurple;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #F43B86;
+}
+
+label {
+  font-size: 22px;
+}
+form {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 10;
+  max-width: 300px;
+  margin: 5px auto;
+}
+form button {
+  background: rgb(77, 5, 53);
+  width: 100%;
+  margin: 5px 0;
+  color: white;
+}
+.start {
+  background: rgb(49, 125, 100);
+  color: white;
+}
+.break {
+  background: rgb(0, 199, 116);
+  color: #000000;
+}
+.reset {
+  background: rgb(107, 124, 179);
+  color: #000000;
+}
+.pause {
+  background: rgb(253, 143, 17);
+}
+.resume{
+  background: rgb(131, 10, 252);
+  color: white;
+}
+.clock {
+  padding: 13px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 60%;
+  font-size: 24px;
+}
+.progress-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress-ring__circle {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke: rgb(255,255,51);
+}
+
+footer {
+  position: fixed;
+  bottom: 4px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.danger {
+  stroke: rgb(255, 0, 13);
+  animation: pulse 0.9s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: rotate(-90deg) scale(1);
+  }
+  50% {
+    transform: rotate(-90deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-90deg) scale(0.8);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "head head"
+      "clock form"
+      "btns ji";
+  }
+  .btn-group {
+    grid-area: btns;
+    justify-content: center;
+  }
+  .clock {
+    grid-area: clock;
+    height: 100%;
+  }
+  h1 {
+    grid-area: head;
+
+    align-self: center;
+  }
+  form {
+    align-self: center;
+    justify-self: center;
+    grid-area: form;
+    width: 50%;
+    justify-content: space-around;
+  }
+  footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  form {
+    height: 40%;
+  }
+  footer {
+    position: static;
+  }
+}
